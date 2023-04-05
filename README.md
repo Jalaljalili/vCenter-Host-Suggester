@@ -76,6 +76,43 @@ The suggested hosts are sorted based on the following metrics:
 
 The algorithm also filters out hosts that have over-allocated resources in terms of disk and RAM, and hosts with CPU over-subscription more than 400%.
 
+# Change Password for All Hosts Connected to vCenter
+This Python script connects to vCenter and changes the password for all hosts that are connected to it.
+## Prerequisites
+  *  Python 3 installed on your machine
+  *  The pyVmomi module installed. You can install it via pip:
+
+```bash
+pip install pyVmomi 
+```
+*  Access to vCenter with administrator privileges
+## Usage
+
+  1.  Clone the repository or download the script file change_host_password.py.
+
+  2.  Open the change_host_password.py file in a text editor.
+
+  3.  Modify the following variables at the top of the script according to your vCenter details and desired new password:
+
+    vcenter_host: the hostname or IP address of the vCenter server.
+    vcenter_user: the username to connect to vCenter.
+    vcenter_pass: the password to connect to vCenter.
+    new_password: the new password that will be set for all the hosts.
+
+  4.  Save the modified script file.
+
+  5.  Open a terminal or command prompt and navigate to the directory containing the change_host_password.py file.
+
+  6.  Run the script:
+  ```bash
+  python change_host_password.py
+  ```
+  7.  Wait for the script to complete. The script will print the status of each host and whether the password change was successful or not.
+
+## Disclaimer
+
+Use this script at your own risk. The author is not responsible for any damage or loss caused by the use of this script. It is recommended that you test the script in a non-production environment before using it in a production environment.
+
 ## Author
 
 This script was created by [Jalal Jalili].
